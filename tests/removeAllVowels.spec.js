@@ -5,6 +5,12 @@ describe('removeAllVowels Filter', function () {
 
 	beforeEach(inject(function ($injector) {
 		$filter = $injector.get('$filter');
+
+		removeAllVowels = $filter('removeAllVowels');
 	}));
+
+	it('should remove all vowels', function(){
+		expect(removeAllVowels('Biscuit')).toEqual('Bsct');
+	});
 
 });
